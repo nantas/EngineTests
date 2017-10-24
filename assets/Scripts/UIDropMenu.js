@@ -7,27 +7,28 @@ cc.Class({
         dropMenuPop: cc.Node,
         dropMenuContent: cc.Node,
         test: false,
-        testItems: [cc.String]
+        items: [cc.String]
     },
 
     // use this for initialization
     onLoad: function () {
         // this.dropMenuPop.active = false;
         this.currentIdx = -1;
-        this.items = [];
-        this.dropMenuPop.scale = 0;
+        this.dropMenuPop.active = false;
         if (this.test) {
-            this.generateTestMenu();
+            this.initMenu();
         }
     },
     
-    generateTestMenu () {
-        for (let i = 0; i < this.testItems.length; ++i) {
-            let itemName = this.testItems[i];
-            this.items.push(itemName);
+    initMenu (inputItems) {
+        if (inputItems) {
+            this.items = inputItems;
+        }
+        for (let i = 0; i < this.items.length; ++i) {
+            let itemName = this.items[i];
             let itemN = cc.instantiate(this.dropItemPrefab);
             let item = itemN.getComponent('DropMenuItem');
-            item.init(this, i, itemName, (i !== this.testItems.length - 1));
+            item.init(this, i, itemName, (i !== this.items.length - 1));
             this.dropMenuContent.addChild(itemN);
         }
         this.onSelect(0);
@@ -36,7 +37,7 @@ cc.Class({
     onSelect(idx) {
         this.currentIdx = idx;
         this.currentItemLabel.string = this.items[idx];
-        this.dropMenuPop.scale = 0;
+        this.dropMenuPop.active = false;
     },
 
     onEnable () {
@@ -47,7 +48,9 @@ cc.Class({
         this.node.off('touchend', this.onClick, this);
     },
 
-    onClick () {
-        this.dropMenuPop.scale = 1;
+    onClick (event) {
+        if (event.target === event.currentTarget) {
+            this.dropMenuPop.active = true;
+        }
     }
 });

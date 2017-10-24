@@ -31,7 +31,20 @@ cc.Class({
         } else {
             this.sprite.spriteFrame = this.texOff;
         }
+    },
+
+    onEnable () {
+        this.node.on('touchend', this.onClick, this);
+    },
+
+    onDisable () {
+        this.node.off('touchend', this.onClick, this);
+    },
+
+    onClick () {
+        this.checked = !this.checked;
     }
+
 
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

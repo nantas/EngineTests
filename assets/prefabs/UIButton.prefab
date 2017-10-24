@@ -12,26 +12,6 @@
     "__type__": "cc.Node",
     "_name": "UIButton",
     "_objFlags": 0,
-    "_parent": null,
-    "_children": [
-      {
-        "__id__": 2
-      }
-    ],
-    "_tag": -1,
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 5
-      },
-      {
-        "__id__": 6
-      }
-    ],
-    "_prefab": {
-      "__id__": 7
-    },
-    "_id": "",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -41,6 +21,7 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
+    "_parent": null,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
@@ -51,6 +32,11 @@
       "width": 120,
       "height": 45
     },
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
     "_rotationX": 0,
     "_rotationY": 0,
     "_scaleX": 1,
@@ -64,28 +50,27 @@
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
+    "_tag": -1,
     "_opacityModifyRGB": false,
+    "_id": "",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 6
+      }
+    ],
+    "_prefab": {
+      "__id__": 7
+    },
     "groupIndex": 0
   },
   {
     "__type__": "cc.Node",
     "_name": "Label",
     "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [],
-    "_tag": -1,
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 3
-      }
-    ],
-    "_prefab": {
-      "__id__": 4
-    },
-    "_id": "",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -95,6 +80,9 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 1
+    },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
@@ -105,6 +93,7 @@
       "width": 100,
       "height": 40
     },
+    "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
     "_scaleX": 1,
@@ -118,7 +107,18 @@
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
+    "_tag": -1,
     "_opacityModifyRGB": false,
+    "_id": "",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 3
+      }
+    ],
+    "_prefab": {
+      "__id__": 4
+    },
     "groupIndex": 0
   },
   {
@@ -203,12 +203,12 @@
       "a": 255
     },
     "duration": 0.1,
-    "zoomScale": 0.85,
+    "zoomScale": 0.9,
     "pressedSprite": {
-      "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
+      "__uuid__": "1dad7cb5-2e3e-4246-bf2d-95a250749881"
     },
     "hoverSprite": {
-      "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
+      "__uuid__": "1dad7cb5-2e3e-4246-bf2d-95a250749881"
     },
     "clickEvents": [],
     "_N$interactable": true,
@@ -228,7 +228,7 @@
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "a802f6ce-ff50-49d8-aa65-c746229197f0"
     },
     "_N$disabledSprite": {
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
